@@ -5,18 +5,18 @@ Requires at least: 2.8
 Tested up to: 4
 Stable tag: 1
 
-IntÃ©grez les services FERank (www.ferank.fr) sur votre blog
+Intégrez les services FERank (www.ferank.fr) sur votre blog
 
 == Description ==
 
-IntÃ©grez facilement les services [FERank](https://www.ferank.fr/) (mesure d'audience et rÃ©gie publicitaire) sur votre blog.
+Intégrez facilement les services [FERank](https://www.ferank.fr/) (mesure d'audience et régie publicitaire) sur votre blog.
 
-Le service de mesure d'audience vous livre en temps rÃ©el de prÃ©cieux indicateurs sur la popularitÃ© de votre blog ([tarification sur mesure](https://www.ferank.fr/tarifs/)).
-Vous pouvez installer le marqueur classique - totalement invisible - ou le marqueur avec systÃ¨me d'opposition conforme Ã  la lÃ©gislation sur les cookies avec [tarteaucitron.js](https://opt-out.ferank.eu/fr/).
+Le service de mesure d'audience vous livre en temps réel de précieux indicateurs sur la popularité de votre blog ([tarification sur mesure](https://www.ferank.fr/tarifs/)).
+Vous pouvez installer le marqueur classique - totalement invisible - ou le marqueur avec système d'opposition conforme à la législation sur les cookies avec [tarteaucitron.js](https://opt-out.ferank.eu/fr/).
 
-FERank propose Ã©galement un service de monÃ©tisation d'audience via sa rÃ©gie publicitaire (accessible aux professionnels disposant d'un numÃ©ro SIREN valide) et est une des seules rÃ©gies Ã  mettre Ã  disposition un format publicitaire <a href="https://www.ferank.fr/responsive/" target="_blank">Responsive Design</a> s'adpatent automatiquement Ã  vos thÃ¨mes !
+FERank propose également un service de monétisation d'audience via sa régie publicitaire (accessible aux professionnels disposant d'un numéro SIREN valide) et est une des seules régies à mettre à disposition un format publicitaire <a href="https://www.ferank.fr/responsive/" target="_blank">Responsive Design</a> s'adpatent automatiquement à vos thèmes !
 
-Via les widgets et les shortcodes (ex: [ferank taille=300x250]) l'ajout des publicitÃ©s dans les sidebars ou emplacements de votre thÃ¨me est un jeu d'enfant :)
+Via les widgets et les shortcodes (ex: [ferank taille=300x250]) l'ajout des publicités dans les sidebars ou emplacements de votre thème est un jeu d'enfant :)
 
 Liste des formats disponibles :
 * Responsive (660x250 pour le shortcode)

@@ -59,11 +59,11 @@ class ferank_Widget extends WP_Widget {
 		<optgroup label="Autre : horizontal">
 		<option value="728x90"<?php if($taille=='728x90'){echo ' selected';}?>>Leaderboard : 728x90</option>
 		<option value="970x90"<?php if($taille=='970x90'){echo ' selected';}?>>Grand leaderboard : 970x90</option>
-		<option value="468x60"<?php if($taille=='468x60'){echo ' selected';}?>>BanniÃ¨re : 468x60</option>
+		<option value="468x60"<?php if($taille=='468x60'){echo ' selected';}?>>Bannière : 468x60</option>
 		</optgroup>
-		<optgroup label="Autre : carrÃ©">
+		<optgroup label="Autre : carré">
 		<option value="300x250"<?php if($taille=='300x250'){echo ' selected';}?>>Rectangle moyen : 300x250</option>
-		<option value="250x250"<?php if($taille=='250x250'){echo ' selected';}?>>CarrÃ© : 250x250</option>
+		<option value="250x250"<?php if($taille=='250x250'){echo ' selected';}?>>Carré : 250x250</option>
 		<option value="336x280"<?php if($taille=='336x280'){echo ' selected';}?>>Grand rectangle : 336x280</option>
 		</optgroup>
 		<optgroup label="Autre : verticaux">
