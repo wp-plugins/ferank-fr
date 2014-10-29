@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 
 // Admin
 if(!class_exists('ferank_Admin'))
@@ -12,7 +12,7 @@ if(!class_exists('ferank_Admin'))
 		var $filename = 'ferank-fr/ferank.php';
 		var $homepage = 'https://www.ferank.fr/';
 		
-		// Ajout de la page des réglages et test config
+		// Ajout de la page des rÃ©glages et test config
 		function ferank_Admin() {
             add_action('admin_menu', array(&$this, 'register_settings_page'));
 			add_filter('plugin_action_links', array(&$this,'add_action_link'), 10, 2);
@@ -32,7 +32,7 @@ if(!class_exists('ferank_Admin'))
 			register_setting( 'ferank', 'ferank_stylebas' );
 		}
 		
-		// Ajout de la page des réglages
+		// Ajout de la page des rÃ©glages
 		function register_settings_page() {
 			$hook_suffix = add_options_page($this->longname, $this->shortname, 'manage_options', $this->hook, array(&$this,'ferank_config_page'));
 			add_action('load-' . $hook_suffix , array(&$this,'ferank_load_function'));
@@ -52,10 +52,10 @@ if(!class_exists('ferank_Admin'))
 		
 		// Alerte
 		function ferank_admin_notices() {
-			echo "<div id='notice' class='updated fade'><p>Un compte sur <a href='https://www.ferank.fr/' target='_blank'>FERank</a> est requis. L'<a href='" . $this->plugin_options_url() . "'>ID éditeur de votre compte n'est pas encore configuré</a>.</p></div>\n";
+			echo "<div id='notice' class='updated fade'><p>Un compte sur <a href='https://www.ferank.fr/' target='_blank'>FERank</a> est requis. L'<a href='" . $this->plugin_options_url() . "'>ID Ã©diteur de votre compte n'est pas encore configurÃ©</a>.</p></div>\n";
 		}
 		
-		// Page des réglages
+		// Page des rÃ©glages
 		function ferank_config_page() {
 			?>
 			<div class="wrap" style="float:left">
@@ -80,13 +80,13 @@ if(!class_exists('ferank_Admin'))
 				</tr>
                 </table>
                 </div>
-                <h2 style="margin:30px 0 20px">Régie publicitaire</h2>
-				<h3>Options générales</h3>
+                <h2 style="margin:30px 0 20px">RÃ©gie publicitaire</h2>
+				<h3>Options gÃ©nÃ©rales</h3>
                 <div class="ferankDiv">
-                <p>Le service éditeur de FERank n'est accessible qu'aux professionnels ayant un numéro SIREN valide. N'hésitez pas à <a href="https://www.ferank.fr/contact/" target="_blank">me contacter</a> pour mettre à jour votre profil si besoin.</p>
+                <p>Le service Ã©diteur de FERank n'est accessible qu'aux professionnels ayant un numÃ©ro SIREN valide. N'hÃ©sitez pas Ã  <a href="https://www.ferank.fr/contact/" target="_blank">me contacter</a> pour mettre Ã  jour votre profil si besoin.</p>
 				<table class="form-table">
 				<tr valign="top">
-				<th scope="row">Votre ID éditeur (<a href="https://www.ferank.fr/client/securite/" target="_blank">récuperer mon ID</a>)</th>
+				<th scope="row">Votre ID Ã©diteur (<a href="https://www.ferank.fr/client/securite/" target="_blank">rÃ©cuperer mon ID</a>)</th>
 				<td><input type="text" name="ferank_id" value="<?php echo get_option('ferank_id'); ?>" /></td>
 				</tr>
 				<tr valign="top">
@@ -101,7 +101,7 @@ if(!class_exists('ferank_Admin'))
                 </div>
 				<h3>Annonces dans les articles</h3>
                 <div class="ferankDiv">
-                <p>Cette option vous permet d'afficher automatiquement un bloc d'annonce <a href="https://www.ferank.fr/responsive/" target="_blank">responsive</a> au début et/ou à la fin de vos articles.</p>
+                <p>Cette option vous permet d'afficher automatiquement un bloc d'annonce <a href="https://www.ferank.fr/responsive/" target="_blank">responsive</a> au dÃ©but et/ou Ã  la fin de vos articles.</p>
 				<table class="form-table">
 				<tr valign="top">
 				<th scope="row">Affichage au dessus des articles ?</th>
@@ -126,9 +126,9 @@ if(!class_exists('ferank_Admin'))
 			</div>
             <div style="float:left;padding:10px;margin-top:72px;width:250px;margin-left:30px;background:#fff;border:1px solid #eee;border-bottom:2px solid #ddd;">
                 <h4>Widgets</h4>
-                <p>Ajoutez des blocs d'annonces publicitaires via les widgets de votre thème.</p>
+                <p>Ajoutez des blocs d'annonces publicitaires via les widgets de votre thÃ¨me.</p>
                 <h4>Shortcodes</h4>
-                <p>Ajoutez des blocs d'annonces publicitaires directement depuis vos articles ou votre thème en insérant un shortcode :</p>
+                <p>Ajoutez des blocs d'annonces publicitaires directement depuis vos articles ou votre thÃ¨me en insÃ©rant un shortcode :</p>
                 <p style="font-family:courrier">
                     [ferank taille=660x250] <-- responsive design<br/>
                     [ferank taille=336x280]<br/>
@@ -147,17 +147,17 @@ if(!class_exists('ferank_Admin'))
 			<?php		
 		}
 		
-		// Liens vers les réglages
+		// Liens vers les rÃ©glages
 		function plugin_options_url() {
 			return admin_url('options-general.php?page='.$this->hook);
 		}
 		
-		// Liens vers les réglages depuis la page des extensions
+		// Liens vers les rÃ©glages depuis la page des extensions
 		function add_action_link( $links, $file ) {
 			static $this_plugin;
 			if( empty($this_plugin) ) $this_plugin = $this->filename;
 			if ( $file == $this_plugin ) {
-				$settings_link = '<a href="' . $this->plugin_options_url() . '">' . __('Réglages') . '</a>';
+				$settings_link = '<a href="' . $this->plugin_options_url() . '">' . __('RÃ©glages') . '</a>';
 				array_unshift( $links, $settings_link );
 			}
 			return $links;
