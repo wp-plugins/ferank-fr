@@ -1,9 +1,9 @@
-﻿<?php
+<?php
 /*
 Plugin Name: FERank
 Plugin URI: https://www.ferank.fr/
 Description: Intégration des services FERank à votre blog
-Version: 1.0
+Version: 1.0.1
 Author: Amauri CHAMPEAUX
 Author URI: http://frnk.fr/a-propos
 */

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 // Admin
 if(!class_exists('ferank_Admin'))
@@ -17,11 +17,12 @@ if(!class_exists('ferank_Admin'))
             add_action('admin_menu', array(&$this, 'register_settings_page'));
 			add_filter('plugin_action_links', array(&$this,'add_action_link'), 10, 2);
 			add_action('admin_init', array(&$this,'ferank_register'));
-			if(get_option('ferank_id') == ''){add_action('admin_notices', array(&$this,'ferank_admin_notices'));}
+			if(get_option('ferank_notif') == ''){add_action('admin_notices', array(&$this,'ferank_admin_notices'));}
 		}
 		
 		// Enregistrement des options
 		function ferank_register() {
+			register_setting( 'ferank', 'ferank_notif' );
 			register_setting( 'ferank', 'ferank_marker_type' );            
 			register_setting( 'ferank', 'ferank_id' );
 			register_setting( 'ferank', 'ferank_couleur_titre' );
@@ -52,7 +53,7 @@ if(!class_exists('ferank_Admin'))
 		
 		// Alerte
 		function ferank_admin_notices() {
-			echo "<div id='notice' class='updated fade'><p>Un compte sur <a href='https://www.ferank.fr/' target='_blank'>FERank</a> est requis. L'<a href='" . $this->plugin_options_url() . "'>ID éditeur de votre compte n'est pas encore configuré</a>.</p></div>\n";
+			echo "<div id='notice' class='updated fade'><p>Le module FERank a été correctement installé ! <a href='" . $this->plugin_options_url() . "'>Configurer le module</a></p></div>\n";
 		}
 		
 		// Page des réglages
@@ -64,6 +65,20 @@ if(!class_exists('ferank_Admin'))
 				<?php
 				settings_fields( 'ferank' );
 				?>
+                <div class="ferankDiv" style="margin-bottom:25px;">
+                    <p><b>Avant d'utiliser les services FERank, vous devez <a href="https://www.ferank.fr/inscription/" target="_blank">ouvrir un compte</a>.</b><br/><br/>Le premier site ajouté bénéficiera de 15 jours d'essai sans aucun d'engagement pour tester le service de mesure d'audience.<br/><em>Pour monétiser votre blog avec le service éditeur, vous devez être un professionnel avec un numéro SIREN, les particuliers ne sont pas acceptés (<a href="https://www.ferank.fr/cgv/#editeur" target="_blank">Voir les Conditions Générales</a>).</em></p>
+				<table class="form-table">
+				<tr valign="top">
+				<th scope="row">J'ai un compte FERank valide</th>
+				<td>
+                    <select name="ferank_notif">
+                        <option value=""></option>
+                        <option value="oui" <?php if (get_option('ferank_notif') == "oui"){ echo ' selected';} ?>>Oui! :)</option>
+                    </select>
+                </td>
+				</tr>
+                </table>
+                </div>
                 <h2 style="margin-bottom:20px">Mesure d'audience</h2>
                 <div class="ferankDiv">
                 <p>Le marqueur de mesure d'audience classique est totalement invisible, le marqueur avec opposition utilise le script <a href="https://opt-out.ferank.eu/fr/" target="_blank">tarteaucitron.js</a></p>
@@ -124,7 +139,7 @@ if(!class_exists('ferank_Admin'))
 				<?php submit_button(); ?>
 				</form>
 			</div>
-            <div style="float:left;padding:10px;margin-top:72px;width:250px;margin-left:30px;background:#fff;border:1px solid #eee;border-bottom:2px solid #ddd;">
+            <div style="float:left;padding:10px;margin-top:63px;width:250px;margin-left:30px;background:#fff;border:1px solid #eee;border-bottom:2px solid #ddd;">
                 <h4>Widgets</h4>
                 <p>Ajoutez des blocs d'annonces publicitaires via les widgets de votre thème.</p>
                 <h4>Shortcodes</h4>
