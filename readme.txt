@@ -1,11 +1,11 @@
-﻿=== FERank ===
+=== FERank ===
 Contributors: Amauri CHAMPEAUX
 Tags: ferank, statistique, publicite, pub, analytics
 Requires at least: 2.8
 Tested up to: 4
-Stable tag: 1
+Stable tag: 1.0.2
 
-Intégrez les services FERank (www.ferank.fr) sur votre blog
+Intégrez facilement les services FERank sur votre blog
 
 == Description ==
 
@@ -42,6 +42,12 @@ Liste des formats disponibles :
 2. Configuration des widgets
 
 == Changelog ==
+
+= 1.0.2 =
+* Encodage UTF-8 - sans BOM -
+
+= 1.0.1 =
+* Modification de l'alerte invitant à créer un compte
 
 = 1.0 =
 * Version initiale

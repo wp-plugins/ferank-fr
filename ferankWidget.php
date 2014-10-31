@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 class ferank_Widget extends WP_Widget {
     
