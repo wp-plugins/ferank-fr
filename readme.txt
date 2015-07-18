@@ -3,7 +3,7 @@ Contributors: Amauri CHAMPEAUX
 Tags: ferank, statistique, publicite, pub, analytics
 Requires at least: 2.8
 Tested up to: 4
-Stable tag: 1.0.2
+Stable tag: trunk
 
 Intégrez facilement les services FERank sur votre blog
 
